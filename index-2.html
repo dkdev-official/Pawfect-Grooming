@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pawfect Grooming — professional pet grooming and care in Guwahati.">
+<title>Pawfect Grooming | Pet Care & Grooming</title>
+<style>
+:root{--bg:#fffaf5;--card:#fff;--ink:#1f2421;--muted:#68706b;--accent:#8b5e3c;--accent2:#e7b77b;--soft:#f5eadf;--line:#eadfd4;--shadow:0 18px 45px rgba(45,35,25,.10);--radius:24px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,250,245,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(234,223,212,.8)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:1.15rem;letter-spacing:-.5px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:25px;font-size:.92rem;color:#555}
+.navlinks a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn.light{background:#fff;color:var(--accent);border:1px solid var(--line)}
+.btn.gold{background:var(--accent2);color:#2b2118}
+.hero{padding:76px 0 60px;background:radial-gradient(circle at 85% 15%,#f3d9b9 0,transparent 30%),linear-gradient(135deg,#fffaf5,#f8eee5)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.badge{display:inline-flex;padding:8px 13px;border-radius:999px;background:#f2e2d1;color:var(--accent);font-size:.82rem;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:.98;letter-spacing:-3px;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:590px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{min-height:470px;border-radius:34px;background:linear-gradient(145deg,#d9b18b,#8b5e3c);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero-art:before{content:"🐶";position:absolute;font-size:15rem;right:2%;bottom:-8%;filter:drop-shadow(0 18px 12px rgba(0,0,0,.16))}
+.hero-card{position:absolute;left:22px;top:22px;background:rgba(255,255,255,.92);padding:16px 18px;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.12);font-weight:800}
+.hero-card small{display:block;color:var(--muted);font-weight:600}
+.stats{display:flex;gap:25px;margin-top:34px;flex-wrap:wrap}.stat strong{display:block;font-size:1.45rem}.stat span{font-size:.8rem;color:var(--muted)}
+section{padding:88px 0}.section-head{max-width:650px;margin-bottom:38px}.eyebrow{color:var(--accent);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-1.5px;margin-bottom:12px}.section-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 8px 25px rgba(45,35,25,.04)}
+.icon{width:52px;height:52px;border-radius:16px;background:var(--soft);display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px}
+.card h3{margin-bottom:7px}.card p{color:var(--muted);font-size:.94rem}
+.price{font-size:1.6rem;font-weight:900;margin:15px 0 17px;color:var(--accent)}
+.list{list-style:none;color:var(--muted);font-size:.9rem}.list li{margin:8px 0}.list li:before{content:"✓";color:var(--accent);font-weight:900;margin-right:8px}
+.feature{background:#201b17;color:#fff}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.feature p{color:#cfc7c0}.feature .eyebrow{color:#e7b77b}
+.gallery{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-auto-rows:190px;gap:12px}.photo{border-radius:20px;background-size:cover;background-position:center;min-height:180px;overflow:hidden;position:relative}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.25))}
+.photo.one{grid-row:span 2;background:linear-gradient(135deg,#c99668,#f1d3b3)}.photo.two{background:linear-gradient(135deg,#e8c6a5,#a86f4b)}.photo.three{background:linear-gradient(135deg,#bca48f,#eee0d3)}
+.photo.four{grid-column:span 2;background:linear-gradient(135deg,#8f725e,#d9c0a9)}
+.photo span{position:absolute;z-index:2;bottom:12px;left:14px;color:#fff;font-weight:800}
+.testimonials{background:#f5eadf}.review{position:relative}.stars{color:#c88636;letter-spacing:2px;margin-bottom:12px}.review p{font-size:1rem;margin-bottom:17px}.review strong{font-size:.9rem}.review small{display:block;color:var(--muted)}
+.cta{padding:30px;border-radius:30px;background:linear-gradient(135deg,#8b5e3c,#5f3c27);color:#fff;display:flex;justify-content:space-between;gap:25px;align-items:center}.cta p{color:#eaded5}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{padding:30px;border:1px solid var(--line);border-radius:24px;background:#fff}.contact-row{display:flex;gap:14px;margin:18px 0}.contact-row b{display:block}.contact-row span{color:var(--muted);font-size:.9rem}
+footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.mobile-menu{display:none}
+@media(max-width:800px){
+.navlinks{display:none}.mobile-menu{display:block;background:none;border:0;font-size:1.5rem}
+.hero{padding-top:48px}.hero-grid,.feature-grid,.contact-grid{grid-template-columns:1fr}.hero-art{min-height:330px}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.photo.one{grid-row:span 2}.photo.four{grid-column:span 2}.cta{flex-direction:column;align-items:flex-start}
+h1{letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">Pawfect<span> Grooming</span> 🐾</a>
+    <nav class="navlinks">
+      <a href="#services">Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Book Now</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+  <div class="badge">🐾 Professional Pet Care in Guwahati</div>
+  <h1>Happy pets.<br><em>Fresh looks.</em><br>Healthy care.</h1>
+  <p>Professional grooming and caring pet services designed to keep your furry friends clean, comfortable and looking their best.</p>
+  <div class="actions">
+    <a class="btn" href="#contact">💬 WhatsApp Us</a>
+    <a class="btn light" href="#services">Explore Services</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong>4.9★</strong><span>Customer rating</span></div>
+    <div class="stat"><strong>23+</strong><span>Public reviews</span></div>
+    <div class="stat"><strong>♥</strong><span>Pet-first care</span></div>
+  </div>
+</div>
+<div class="hero-art">
+  <div class="hero-card">Gentle care, every visit<small>Grooming • Care • Comfort</small></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-head"><div class="eyebrow">What we do</div><h2>Everything your pet needs to feel paw-some.</h2><p>Choose the service your pet needs and talk to us directly for availability and pricing.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">✂️</div><h3>Full Grooming</h3><p>Bath, drying, brushing, coat care and a neat finish for a fresh, comfortable pet.</p></div>
+<div class="card"><div class="icon">🛁</div><h3>Bath & Care</h3><p>A gentle cleaning session focused on keeping your pet clean and comfortable.</p></div>
+<div class="card"><div class="icon">🐕</div><h3>Pet Training</h3><p>Support for better habits, basic training and a happier relationship with your pet.</p></div>
+</div>
+</div>
+</section>
+
+<section id="packages" style="background:#fff">
+<div class="container">
+<div class="section-head"><div class="eyebrow">Simple packages</div><h2>Pick the right level of care.</h2><p>Demo pricing — actual prices will be added after business approval.</p></div>
+<div class="cards">
+<div class="card"><h3>Fresh & Clean</h3><div class="price">Demo pricing</div><ul class="list"><li>Bath & drying</li><li>Basic brushing</li><li>Coat refresh</li></ul><br><a class="btn light" href="#contact">Enquire</a></div>
+<div class="card" style="border:2px solid var(--accent)"><h3>Full Groom</h3><div class="price">Demo pricing</div><ul class="list"><li>Full grooming session</li><li>Brushing & coat care</li><li>Neat finishing</li></ul><br><a class="btn" href="#contact">Enquire</a></div>
+<div class="card"><h3>Training</h3><div class="price">Demo pricing</div><ul class="list"><li>Training consultation</li><li>Basic behaviour support</li><li>Personalised guidance</li></ul><br><a class="btn light" href="#contact">Enquire</a></div>
+</div>
+</div>
+</section>
+
+<section class="feature">
+<div class="container feature-grid">
+<div><div class="eyebrow">Why Pawfect?</div><h2>Because your pet deserves more than just a haircut.</h2><p>Our demo positioning focuses on gentle handling, clean presentation and a pet-first experience. Update these claims to match the business's actual practices.</p></div>
+<div class="card" style="background:#302923;border-color:#4a3d34;color:#fff"><div class="icon">🐾</div><h3>Comfort-first approach</h3><p style="color:#cfc7c0">A clean, modern presentation that helps pet parents quickly understand the service and contact the business.</p></div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<div class="section-head"><div class="eyebrow">A look inside</div><h2>Made for pet parents.</h2><p>Sample gallery — replace with the business's real photos before launch.</p></div>
+<div class="gallery">
+<div class="photo one"><span>Professional grooming</span></div>
+<div class="photo two"><span>Pet care</span></div>
+<div class="photo three"><span>Happy pets</span></div>
+<div class="photo four"><span>Comfortable care environment</span></div>
+</div>
+</div>
+</section>
+
+<section id="reviews" class="testimonials">
+<div class="container">
+<div class="section-head"><div class="eyebrow">Pet parents say</div><h2>Trusted by local customers.</h2><p>Review text below is placeholder copy for the demo. Replace it with verified reviews before launch.</p></div>
+<div class="cards">
+<div class="card review"><div class="stars">★★★★★</div><p>“Friendly service and a clean, professional experience for our pet.”</p><strong>Verified customer</strong><small>Sample review — demo</small></div>
+<div class="card review"><div class="stars">★★★★★</div><p>“The team was caring and made the grooming visit much easier.”</p><strong>Verified customer</strong><small>Sample review — demo</small></div>
+<div class="card review"><div class="stars">★★★★★</div><p>“A convenient place for regular pet care and grooming.”</p><strong>Verified customer</strong><small>Sample review — demo</small></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="cta"><div><h2 style="margin-bottom:5px">Ready for a pawfect appointment?</h2><p>Message us and ask about availability for your pet.</p></div><a class="btn gold" href="#contact">Book on WhatsApp →</a></div>
+</div>
+</section>
+
+<section id="contact" style="padding-top:20px">
+<div class="container">
+<div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's take care of your pet.</h2></div>
+<div class="contact-grid">
+<div class="contact-card">
+<div class="contact-row"><div>📍</div><div><b>Location</b><span>Guwahati, Assam</span></div></div>
+<div class="contact-row"><div>📞</div><div><b>Call us</b><span><a href="tel:+910000000000">+91 XXXXX XXXXX</a></span></div></div>
+<div class="contact-row"><div>💬</div><div><b>WhatsApp</b><span>Quick booking & enquiries</span></div></div>
+<a class="btn" href="#contact">Message on WhatsApp</a>
+</div>
+<div class="contact-card">
+<h3>Find us in Guwahati</h3>
+<p style="color:var(--muted);margin:8px 0 20px">Beltola Tiniali</p>
+<a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pawfect+Grooming+Beltola+Tiniali+Guwahati">📍 Open in Google Maps</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer"><div><b>Pawfect Grooming 🐾</b><br>Pet care & grooming in Guwahati.</div><div>© 2026 Pawfect Grooming. DEMO WEBSITE — Not the final business website.</div></div></footer>
+
+</body>
+</html>
